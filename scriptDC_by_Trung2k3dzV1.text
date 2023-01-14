@@ -89,7 +89,7 @@ while (true) do
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("1;4;43200;1;4;43200::200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.getResults(1000, nil, nil, nil, 43200, 43200)
-        gg.editAll("1000000", gg.TYPE_DWORD)
+        gg.editAll("6480000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         noselect()
 
@@ -99,7 +99,7 @@ while (true) do
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("1;4;1800;1;4;1800::800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.getResults(1000, nil, nil, nil, 1800, 1800)
-        gg.editAll("1000000", gg.TYPE_DWORD)
+        gg.editAll("6480000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         noselect()
 
