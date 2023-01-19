@@ -19,8 +19,8 @@ while (true) do
     function START()
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
-            '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
-            '5.   🏡  Move Habit  🏡',
+            '3.   🐉  Hack Level and Skills 🐉',
+            '4.   🏁  Support Event  🏁', '5.   🏡  Move Habit  🏡',
             '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
@@ -323,7 +323,7 @@ while (true) do
 
     function Start4()
         menu2 = gg.choice({
-            '1.   ⏳   No cooldown  ⏳', '2.   🍎  Food 30s speed 0s 🍎',
+            '1.   ⏳   Skip Battle  ⏳', '2.   🍎  Food 30s speed 0s 🍎',
             '3.   🌕  Terra habitat level 1 collect +1 gold 🌕',
             '4.   🎁  Go coins speed (store it in a chest) 🎁',
             '↩️ Return '
@@ -350,17 +350,155 @@ while (true) do
     end
 
     function NoCoolDown()
+        mursidy = gg.multiChoice({
+            '1. ⏭  No Error  ⏭', '2. ⏭  skip All time  ⏭',
+            '3. ⏭  Skip 15min  ⏭  ', '4. ⏭  Skip 30min  ⏭  ',
+            '5. ⏭  Skip 1h  ⏭ ', '6. ⏭  Skip 1h20min  ⏭',
+            '7. ⏭  Skip 3h  ⏭', '8. ⏭  Skip 6h40min  ⏭',
+            '9. ⏭  Skip 8h⏭  ', '❎ CLOSE ❎'
+        }, nil, '🖥️skip battle heroic and maze🖥️')
 
-        gg.setRanges(gg.REGION_C_ALLOC)
-        gg.searchNumber('-2 000 000 000~-1 000 000;2;300~96000;0::13',
-                        gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-        gg.refineNumber('3~1000000', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-        gg.getResults(1000000)
-        gg.editAll('0', gg.TYPE_DWORD)
-        gg.clearResults()
-        noselect()
+        if mursidy == nil then noselect()
+        else
+            if mursidy[1] == true then NoError1() end
+            if mursidy[2] == true then skipAll() end
+            if mursidy[3] == true then skip15p() end
+            if mursidy[4] == true then skip30p() end
+            if mursidy[5] == true then skip1h() end
+            if mursidy[6] == true then skip1h20p() end
+            if mursidy[7] == true then skip3h() end
+            if mursidy[8] == true then skip6h40p() end
+            if mursidy[9] == true then skip8h() end
+            if mursidy[10] == true then START() end
+        end
+        
 
     end
+
+    function NoError1()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber("Q'error'", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+        gg.getResults(100000)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(10000)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.clearResults()
+    end
+
+    function skipAll()
+        gg.setRanges(gg.REGION_C_ALLOC)
+        gg.searchNumber("-2 000 000 000~-1 000 000 000;2;300~86400;0::13",
+                        gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("300~86400", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(10000)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(10000)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.clearResults()
+    end
+
+    function skip15p()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("900", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("900", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+    end
+
+    function skip30p()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("1800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("1800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+    end
+
+    function skip1h()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("3600", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("3600", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+    end
+
+    function skip1h20p()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("4800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("4800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+    end
+
+    function skip3h()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("10800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("10800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+    end
+    function skip6h40p()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("24000", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("24000", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+    end
+    function skip8h()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("28800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("28800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(5000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        revert = gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+    end
+
     function terraHabitat1Gold()
 
         gg.setRanges(gg.REGION_C_ALLOC)
