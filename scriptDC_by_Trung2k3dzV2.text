@@ -19,7 +19,7 @@ while (true) do
     function START()
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
-            '3.   ⚔  Hack Level and Skills ⚔',
+            '3.   🐉  Hack Level and Skills 🐉',
             '4.   🚩  Support Event  🚩', '5.   🏛  Move Habitat  🏛',
             '6.   🔁  Change Dragon 🐣 --> 🐔 🔁 ', '7.   🌀   Other',
             '❌     Exit     ❌ '
@@ -597,7 +597,11 @@ while (true) do
         gg.refineNumber(data[1], gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.getResults(99999)
         gg.editAll(data[2], gg.TYPE_DWORD)
-
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(10000)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         noselect()
         -- end
     end
