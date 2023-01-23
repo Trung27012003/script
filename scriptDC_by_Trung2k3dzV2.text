@@ -19,9 +19,9 @@ while (true) do
     function START()
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
-            '3.   🐉  Hack Level and Skills 🐉',
-            '4.   🏁  Support Event  🏁', '5.   🏡  Move Habit  🏡',
-            '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
+            '3.   ⚔  Hack Level and Skills ⚔',
+            '4.   🚩  Support Event  🚩', '5.   🏛  Move Habitat  🏛',
+            '6.   🔁  Change Dragon 🐣 --> 🐔 🔁 ', '7.   🌀   Other',
             '❌     Exit     ❌ '
         }, Last,
                          '                           <---❤-🆃🆁🆄🅽🅶2⃣🅺3⃣🅳🆉-❤--->')
@@ -72,8 +72,8 @@ while (true) do
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("1;4;43200;1;4;43200::200", gg.TYPE_DWORD, false,
                         gg.SIGN_EQUAL, 0, -1)
-        gg.getResults(1000, nil, nil, nil, 43200, 43200)
-        gg.editAll("1000000", gg.TYPE_DWORD)
+        gg.getResults(1000)
+        gg.editAll("1 000 000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         noselect()
 
@@ -83,8 +83,8 @@ while (true) do
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("1;4;1800;1;4;1800::800", gg.TYPE_DWORD, false,
                         gg.SIGN_EQUAL, 0, -1)
-        gg.getResults(1000, nil, nil, nil, 1800, 1800)
-        gg.editAll("1000000", gg.TYPE_DWORD)
+        gg.getResults(1000)
+        gg.editAll("1 000 000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         noselect()
 
@@ -351,11 +351,11 @@ while (true) do
 
     function NoCoolDown()
         mursidy = gg.multiChoice({
-            '1. ⏭  No Error  ⏭', '2. ⏭  skip All time  ⏭',
-            '3. ⏭  Skip 15min  ⏭  ', '4. ⏭  Skip 30min  ⏭  ',
-            '5. ⏭  Skip 1h  ⏭ ', '6. ⏭  Skip 1h20min  ⏭',
-            '7. ⏭  Skip 3h  ⏭', '8. ⏭  Skip 6h40min  ⏭',
-            '9. ⏭  Skip 8h⏭  ', '❎ CLOSE ❎'
+            '1. 🕛  No Error  🕛', '2. 🕛  skip All time  🕛',
+            '3. 🕛  Skip 15min  🕛  ', '4. 🕛  Skip 30min  🕛  ',
+            '5. 🕛  Skip 1h  🕛 ', '6. 🕛  Skip 1h20min  🕛',
+            '7. 🕛  Skip 3h  🕛', '8. 🕛  Skip 6h40min  🕛',
+            '9. 🕛  Skip 8h  🕛  ', '❌ CLOSE ❌'
         }, nil, '🖥️skip battle heroic and maze🖥️')
 
         if mursidy == nil then noselect()
@@ -603,11 +603,11 @@ while (true) do
     end
     function Start7()
         menu3 = gg.choice({
-            '1.   🔥  God Dragon Mode 🔥',
-            '2.   🔥  One Hit Dragon ' .. OneHits .. '  🔥',
-            '3.   🔥  No dame Dragon ' .. NoDamages .. '  🔥',
-            '4.   🔥  Big Dragon ' .. BigDC .. '  🔥',
-            '5.   🔥  Small Dragon ' .. SmallDC .. '  🔥', '↩️ Return '
+            '1.   💪  God Dragon Mode 💪',
+            '2.   💪  One Hit Dragon ' .. OneHits .. '  💪',
+            '3.   💪  No dame Dragon ' .. NoDamages .. '  💪',
+            '4.   💪  Big Dragon ' .. BigDC .. '  💪',
+            '5.   💪  Small Dragon ' .. SmallDC .. '  💪', '↩️ Return '
         }, Last, 'Hack lv ')
         if menu3 == 1 then GodMode() end
         if menu3 == 2 then OneHit() end
