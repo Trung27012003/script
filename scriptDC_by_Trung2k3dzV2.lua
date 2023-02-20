@@ -52,7 +52,7 @@ while (true) do
         gg.editAll("2022", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
-        noselect()
+        
 
     end
 
@@ -77,7 +77,7 @@ while (true) do
         gg.editAll("1000000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
-        noselect()
+        
     end
     function skips30p()
         NoError()
@@ -88,7 +88,7 @@ while (true) do
         gg.editAll("1000000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
-        noselect()
+        
     end
     function Start3()
         menu1 = gg.choice({
@@ -138,7 +138,7 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code2()
         -- hack lv
@@ -172,7 +172,7 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code3()
         -- hack lv
@@ -206,7 +206,7 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code4()
         -- hack lv
@@ -240,7 +240,7 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code5()
         -- hack lv
@@ -274,7 +274,7 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code6()
         gg.setRanges(gg.REGION_C_ALLOC)
@@ -306,7 +306,7 @@ while (true) do
         gg.getResults(99999)
         gg.editAll("310;301;307;255", gg.TYPE_DWORD) -- hack 4 skills đặc biệt
         NoError()
-        noselect()
+        
     end
     function Start4()
         menu2 = gg.choice({
@@ -331,7 +331,7 @@ while (true) do
             '8. 🕛  Skip 8h  🕛  ', '❌ CLOSE ❌'
         }, nil, '📺  Skip Battle  📺')
 
-        if mursidy == nil then noselect()
+        if mursidy == nil then 
         else
             if mursidy[1] == true then NoError1() end
             if mursidy[2] == true then skipAll() end
@@ -352,6 +352,7 @@ while (true) do
         gg.getResults(10000)
         gg.editAll("0", gg.TYPE_BYTE)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        noselect()
     end
     function NoError1()
         gg.setRanges(gg.REGION_CODE_APP)
@@ -435,7 +436,7 @@ while (true) do
         gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
         gg.editAll("0", gg.TYPE_DWORD)
         NoError()
-        noselect()
+        
     end
     function terraHabitat1Gold()
         gg.setRanges(gg.REGION_C_ALLOC)
@@ -449,8 +450,8 @@ while (true) do
         gg.setVisible(false)
         NoError()
         gg.clearResults()
-        gg.alert('You must enter the ancient map to activate')
-        noselect()
+        gg.alert('Bạn phải vào mao khác để kích họat chức năng này!')
+        
     end
     function goCoinsSpeed()
         gg.setRanges(gg.REGION_C_ALLOC)
@@ -461,7 +462,7 @@ while (true) do
         gg.editAll('0', gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function Start5()
         gg.clearResults()
@@ -515,7 +516,7 @@ while (true) do
         gg.editAll('0', gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function Start6()
         data = gg.prompt({
@@ -590,7 +591,7 @@ while (true) do
         gg.editAll('0', gg.TYPE_BYTE)
         gg.setVisible(false)
         gg.clearResults()
-        noselect()
+        noselect()      
     end
     function Start8()
         menu3 = gg.choice({
@@ -617,6 +618,7 @@ while (true) do
             setvalue(so + py, 16, 2)
             BigDC = "🔵 ON"
             SmallDC = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2BDA0
@@ -624,6 +626,7 @@ while (true) do
             py = 0xE2BDA4
             setvalue(so + py, 16, 1.10000002384)
             BigDC = "🔴 OFF"
+            noselect()
         end
     end
     function SmallDcC()
@@ -635,6 +638,7 @@ while (true) do
             setvalue(so + py, 16, 0.5)
             SmallDC = "🔵 ON"
             BigDC = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2BDA0
@@ -642,6 +646,7 @@ while (true) do
             py = 0xE2BDA4
             setvalue(so + py, 16, 1.10000002384)
             SmallDC = "🔴 OFF"
+            noselect()
         end
     end
     function OneHit()
@@ -651,11 +656,13 @@ while (true) do
             setvalue(so + py, 16, 9999999)
             OneHits = "🔵 ON"
             NoDamages = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2ACC0
             setvalue(so + py, 16, 1.10000002384)
             OneHits = "🔴 OFF"
+            noselect()
         end
     end
     function NoDamage()
@@ -665,11 +672,13 @@ while (true) do
             setvalue(so + py, 16, -9999999)
             NoDamages = "🔵 ON"
             OneHits = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2ACC0
             setvalue(so + py, 16, 1.10000002384)
             NoDamages = "🔴 OFF"
+            noselect()
         end
     end
     function GodMode()
