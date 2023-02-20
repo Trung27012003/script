@@ -25,7 +25,7 @@ while (true) do
             '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
-                         '                           <---❤-🆃🆁🆄🅽🅶2⃣🅺3⃣🅳🆉-❤--->')
+                         '                           Dragon City Tools\nVersion: Pro \nTime Login:'.. os.date("%H:%M:%S %d-%m-%Y") ..')
         if menu == 1 then Start1() end
         if menu == 2 then Start2() end
         if menu == 3 then Start3() end
