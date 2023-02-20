@@ -17,11 +17,12 @@ while (true) do
         gg.setValues(tt)
     end
     function START()
+
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
-            '3.   🐉  Hack Level and Skills 🐉',
-            '4.   🚩  Support Event  🚩', '5.   🏛  Move Habitat  🏛',
-            '6.   🔁  Change Dragon 🐣 --> 🐔 🔁 ', '7.   🌀   Other',
+            '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
+            '5.   🏡  Move Habit  🏡',
+            '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
                          '                           <---❤-🆃🆁🆄🅽🅶2⃣🅺3⃣🅳🆉-❤--->')
