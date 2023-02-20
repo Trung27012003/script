@@ -3,7 +3,7 @@ local SmallDC = "🔴 OFF"
 local OneHits = "🔴 OFF"
 local NoDamages = "🔴 OFF"
 timess = os.date("%H:%M:%S %d-%m-%Y")
-os.setlocale('en_US.utf8')
+os.setlocale('vi_VN.utf8')
 while (true) do
     if gg.isVisible(true) then
         menuk = 1
