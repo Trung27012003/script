@@ -2,21 +2,7 @@ local BigDC = "🔴 OFF"
 local SmallDC = "🔴 OFF"
 local OneHits = "🔴 OFF"
 local NoDamages = "🔴 OFF"
-local http = require("socket.http")
-local json = require("json")
-
-local function getCountryFromIP(ip)
-    local url = "https://ipapi.co/" .. ip .. "/json/"
-    local response = http.request(url)
-    local data = json.decode(response)
-    return data.country_name
-end
-
--- Sử dụng địa chỉ IP của máy tính hiện tại
-local myIP = os.getenv("REMOTE_ADDR") -- Nếu chạy trong môi trường web
--- hoặc
--- local myIP = os.execute("curl -s ifconfig.me")
-local country = getCountryFromIP(myIP)
+local Country ="Việt Nam 🇻🇳"
 while (true) do
     if gg.isVisible(true) then
         menuk = 1
@@ -40,7 +26,7 @@ while (true) do
             '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
-                         '                      Dragon City Tools\n\nVersion: Pro \n\nTime Login:'.. timess..    ''..country..'')
+                         '                      Dragon City Tools\n\nVersion: Pro \n\nTime Login:'.. timess..    '\n\nCountry: '..Country..'')
         if menu == 1 then Start1() end
         if menu == 2 then Start2() end
         if menu == 3 then Start3() end
