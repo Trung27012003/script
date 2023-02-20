@@ -526,7 +526,6 @@ while (true) do
         gg.refineNumber(data[1], gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.getResults(99999)
         gg.editAll(data[2], gg.TYPE_DWORD)
-        NoError()
         noselect()
         -- end
     end
