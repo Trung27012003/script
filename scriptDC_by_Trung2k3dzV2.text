@@ -72,7 +72,7 @@ while (true) do
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("1;4;43200;1;4;43200::200", gg.TYPE_DWORD, false,
                         gg.SIGN_EQUAL, 0, -1)
-                        gg.refineNumber("43200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("43200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.getResults(1000)
         gg.editAll("1 000 000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -84,7 +84,7 @@ while (true) do
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("1;4;1800;1;4;1800::800", gg.TYPE_DWORD, false,
                         gg.SIGN_EQUAL, 0, -1)
-                        gg.refineNumber("1800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("1800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.getResults(1000)
         gg.editAll("1 000 000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
