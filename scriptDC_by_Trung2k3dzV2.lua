@@ -23,7 +23,9 @@ while (true) do
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
             '5.   🏡  Move Habit  🏡',
-            '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
+            '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ',
+            '6.   🛡️  Change Dragon 🐉 --> 🐍 🛡️ ',
+             '8.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
                          'Dragon City Tools\n\nVersion: Pro \nTime Login: '.. timess..    '\nCountry: '..Country..'')
@@ -34,7 +36,8 @@ while (true) do
         if menu == 5 then Start5() end
         if menu == 6 then Start6() end
         if menu == 7 then Start7() end
-        if menu == 8 then ends() end
+        if menu == 8 then Start8() end
+        if menu == 9 then ends() end
         if menu == nil then noselect() end
         menuk = -1
 
@@ -530,7 +533,7 @@ while (true) do
         noselect()
         -- end
     end
-    function Start7()
+    function Start8()
         menu3 = gg.choice({
             '1.   🔥  God Dragon Mode 🔥',
             '2.   🔥  One Hit Dragon ' .. OneHits .. '  🔥 ( Fixed )',
