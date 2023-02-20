@@ -2,8 +2,6 @@ local BigDC = "🔴 OFF"
 local SmallDC = "🔴 OFF"
 local OneHits = "🔴 OFF"
 local NoDamages = "🔴 OFF"
-timess = os.date("%H:%M:%S %d-%m-%Y")
-os.setlocale('vi_VN.utf8')
 while (true) do
     if gg.isVisible(true) then
         menuk = 1
@@ -19,7 +17,8 @@ while (true) do
         gg.setValues(tt)
     end
     function START()
-
+        timess = os.date("%H:%M:%S %d-%m-%Y")
+        os.setlocale('vi_VN.utf8')
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
@@ -27,7 +26,7 @@ while (true) do
             '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
-                         '                      Dragon City Tools\nVersion: Pro \nTime Logins:'.. timess..    '')
+                         '                      Dragon City Tools\n\nVersion: Pro \nTime Login:'.. timess..    '')
         if menu == 1 then Start1() end
         if menu == 2 then Start2() end
         if menu == 3 then Start3() end
