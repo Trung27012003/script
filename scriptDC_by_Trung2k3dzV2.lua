@@ -18,7 +18,7 @@ while (true) do
         gg.setValues(tt)
     end
     function START()
-        timess = os.date("%H:%M:%S %d-%m-%Y")
+        timess = os.date("%H:%M:%S\t %d-%m-%Y")
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
