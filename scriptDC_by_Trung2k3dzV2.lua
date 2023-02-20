@@ -2,6 +2,8 @@ local BigDC = "🔴 OFF"
 local SmallDC = "🔴 OFF"
 local OneHits = "🔴 OFF"
 local NoDamages = "🔴 OFF"
+timess = os.date("%H:%M:%S %d-%m-%Y")
+os.setlocale('en_US.utf8')
 while (true) do
     if gg.isVisible(true) then
         menuk = 1
@@ -17,8 +19,7 @@ while (true) do
         gg.setValues(tt)
     end
     function START()
-timess = os.date("%H:%M:%S %d-%m-%Y")
-os.setlocale('en_US.utf8')
+
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
