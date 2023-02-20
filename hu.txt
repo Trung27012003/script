@@ -1,0 +1,16 @@
+local http = require("socket.http")
+local json = require("json")
+
+local function getCountryFromIP(ip)
+    local url = "https://ipapi.co/" .. ip .. "/json/"
+    local response = http.request(url)
+    local data = json.decode(response)
+    return data.country_name
+end
+
+-- Sử dụng địa chỉ IP của máy tính hiện tại
+local myIP = os.getenv("REMOTE_ADDR") -- Nếu chạy trong môi trường web
+-- hoặc
+-- local myIP = os.execute("curl -s ifconfig.me")
+local country = getCountryFromIP(myIP)
+gg.alert(country )
