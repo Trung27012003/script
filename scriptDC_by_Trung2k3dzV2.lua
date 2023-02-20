@@ -26,7 +26,7 @@ while (true) do
             '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
-                         '                      Dragon City Tools\n\nVersion: Pro \nTime Login:'.. timess..    '')
+                         '                      Dragon City Tools\n\nVersion: Pro \n\nTime Login:'.. timess..    '')
         if menu == 1 then Start1() end
         if menu == 2 then Start2() end
         if menu == 3 then Start3() end
