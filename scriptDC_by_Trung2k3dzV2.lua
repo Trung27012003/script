@@ -61,14 +61,14 @@ while (true) do
         skip = gg.choice({
             '1.   📺  30p  📺', '2.   📺  12h  📺', '↩️ Return '
         }, nil, 'Skip hiện tại đang có: ')
-        if skip == 1 then skip30p() end
-        if skip == 2 then skip12h() end
+        if skip == 1 then skips30p() end
+        if skip == 2 then skips12h() end
         if skip == 3 then START() end
         if skip == nil then noselect() end
 
     end
 
-    function skip12h()
+    function skips12h()
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.setRanges(gg.REGION_CODE_APP)
         gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
@@ -88,7 +88,7 @@ while (true) do
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         noselect()
     end
-    function skip30p()
+    function skips30p()
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.setRanges(gg.REGION_CODE_APP) 
         gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
@@ -109,7 +109,6 @@ while (true) do
         noselect()
     end
     function Start3()
-
         menu1 = gg.choice({
             '1.   🐉  lv 10  🐉', '2.   🐉  lv 20  🐉',
             '3.   🐉  lv 25  🐉', '4.   🐉  lv 30  🐉',
@@ -124,11 +123,8 @@ while (true) do
         if menu1 == 6 then code6() end
         if menu1 == 7 then START() end
         if menu1 == nil then noselect() end
-
     end
-
     function code1()
-
         -- hack lv
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
@@ -160,11 +156,8 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         gg.clearResults()
         noselect()
-
     end
-
     function code2()
-
         -- hack lv
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
@@ -196,11 +189,8 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         gg.clearResults()
         noselect()
-
     end
-
     function code3()
-
         -- hack lv
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
@@ -232,11 +222,8 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         gg.clearResults()
         noselect()
-
     end
-
     function code4()
-
         -- hack lv
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
@@ -268,10 +255,8 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         gg.clearResults()
         noselect()
-
     end
     function code5()
-
         -- hack lv
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
@@ -303,11 +288,8 @@ while (true) do
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         gg.clearResults()
         noselect()
-
     end
-
     function code6()
-
         gg.setRanges(gg.REGION_C_ALLOC)
         gg.searchNumber(
             "60000~100 000 000;1000~3100;1~20 000 000Q;0F;0~276::17",
@@ -337,9 +319,7 @@ while (true) do
         gg.getResults(99999)
         gg.editAll("310;301;307;255", gg.TYPE_DWORD) -- hack 4 skills đặc biệt
         noselect()
-
     end
-
     function Start4()
         menu2 = gg.choice({
             '1.   ⏳   Skip Battle  ⏳', '2.   🍎  Food 30s speed 0s 🍎',
@@ -354,20 +334,6 @@ while (true) do
         if menu2 == 5 then START() end
         if menu2 == nil then noselect() end
     end
-
-    function SpeedFood()
-
-        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
-        gg.searchNumber("30;5~6;25;250", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0,
-                        -1)
-        gg.refineNumber("30", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-        gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-        gg.editAll("0", gg.TYPE_DWORD)
-        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-        noselect()
-
-    end
-
     function NoCoolDown()
         mursidy = gg.multiChoice({
             '1. 🕛  No Error  🕛', '2. 🕛  skip All time  🕛',
@@ -390,10 +356,8 @@ while (true) do
             if mursidy[9] == true then skip8h() end
             if mursidy[10] == true then START() end
         end
-        
-
     end
-
+   
     function NoError1()
         gg.setRanges(gg.REGION_CODE_APP)
         gg.searchNumber("Q'error'", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -406,7 +370,6 @@ while (true) do
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.clearResults()
     end
-
     function skipAll()
         gg.setRanges(gg.REGION_C_ALLOC)
         gg.searchNumber("-2 000 000 000~-1 000 000 000;2;300~86400;0::13",
@@ -421,7 +384,6 @@ while (true) do
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.clearResults()
     end
-
     function skip15p()
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("900", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -435,7 +397,6 @@ while (true) do
         gg.editAll("0", gg.TYPE_BYTE)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
     end
-
     function skip30p()
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("1800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -449,7 +410,6 @@ while (true) do
         gg.editAll("0", gg.TYPE_BYTE)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
     end
-
     function skip1h()
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("3600", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -463,7 +423,6 @@ while (true) do
         gg.editAll("0", gg.TYPE_BYTE)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
     end
-
     function skip1h20p()
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("4800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -477,7 +436,6 @@ while (true) do
         gg.editAll("0", gg.TYPE_BYTE)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
     end
-
     function skip3h()
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("10800", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -517,9 +475,17 @@ while (true) do
         gg.editAll("0", gg.TYPE_BYTE)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
     end
-
+    function SpeedFood()
+        gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+        gg.searchNumber("30;5~6;25;250", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0,
+                        -1)
+        gg.refineNumber("30", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+        gg.editAll("0", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        noselect()
+    end
     function terraHabitat1Gold()
-
         gg.setRanges(gg.REGION_C_ALLOC)
         gg.setVisible(false)
         gg.searchNumber('1;4;500::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -532,10 +498,8 @@ while (true) do
         gg.clearResults()
         gg.alert('You must enter the ancient map to activate')
         noselect()
-
     end
     function goCoinsSpeed()
-
         gg.setRanges(gg.REGION_C_ALLOC)
         gg.searchNumber('17179869185Q;4294967300Q;1;100~2147483647::21',
                         gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -544,11 +508,8 @@ while (true) do
         gg.editAll('0', gg.TYPE_DWORD)
         gg.clearResults()
         noselect()
-
     end
-
     function Start5()
-
         gg.clearResults()
         gg.setRanges(gg.REGION_C_ALLOC)
         gg.searchNumber(
@@ -600,10 +561,8 @@ while (true) do
         gg.editAll('0', gg.TYPE_DWORD)
         gg.clearResults()
         noselect()
-
     end
     function Start6()
-
         data = gg.prompt({
             "Current dragon (Code in ditlep.com/code):",
             "Dragon you want (Code in ditlep.com/code):"
@@ -639,9 +598,7 @@ while (true) do
         if menu3 == 5 then SmallDcC() end
         if menu3 == 6 then START() end
         if menu3 == nil then noselect() end
-
     end
-
     function BigDcC()
         if BigDC == "🔴 OFF" then
             so = gg.getRangesList("libDragonCity.so")[1].start
@@ -692,7 +649,6 @@ while (true) do
             OneHits = "🔴 OFF"
         end
     end
-
     function NoDamage()
         if NoDamages == "🔴 OFF" then
             so = gg.getRangesList("libDragonCity.so")[1].start
