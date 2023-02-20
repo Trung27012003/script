@@ -23,7 +23,7 @@ while (true) do
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
             '5.   🏡  Move Habit  🏡',
-            '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ',
+            '6.   🔁  Change Dragon 🐍 --> 🐉 🔁 ',
             '7.   🛡️  Tường Lửa MD5 🛡️ ',
              '8.   🔘   Other',
             '❌     Exit     ❌ '
@@ -324,12 +324,12 @@ while (true) do
     end
     function NoCoolDown()
         mursidy = gg.multiChoice({
-            '1. 🕛  No Error  🕛', '2. 🕛  skip All time  🕛',
-            '3. 🕛  Skip 15min  🕛  ', '4. 🕛  Skip 30min  🕛  ',
-            '5. 🕛  Skip 1h  🕛 ', '6. 🕛  Skip 1h20min  🕛',
-            '7. 🕛  Skip 3h  🕛', '8. 🕛  Skip 6h40min  🕛',
-            '9. 🕛  Skip 8h  🕛  ', '❌ CLOSE ❌'
-        }, nil, '🖥️skip battle heroic and maze🖥️')
+            '0. 🕛  No Error  🕛', '1. 🕛  skip All time  🕛',
+            '2. 🕛  Skip 15min  🕛  ', '3. 🕛  Skip 30min  🕛  ',
+            '4. 🕛  Skip 1h  🕛 ', '5. 🕛  Skip 1h20min  🕛',
+            '6. 🕛  Skip 3h  🕛', '7. 🕛  Skip 6h40min  🕛',
+            '8. 🕛  Skip 8h  🕛  ', '❌ CLOSE ❌'
+        }, nil, '📺  Skip Battle  📺')
 
         if mursidy == nil then noselect()
         else
@@ -534,63 +534,63 @@ while (true) do
         -- end
     end
     function Start7()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.setVisible(false)
-gg.searchNumber(':userid')
-gg.setVisible(false)
-gg.getResults(100000)
-gg.editAll('0', gg.TYPE_BYTE)
-gg.setVisible(false)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.setVisible(false)
-gg.searchNumber(':token')
-gg.setVisible(false)
-gg.getResults(100000)
-gg.editAll('0', gg.TYPE_BYTE)
-gg.setVisible(false)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.setVisible(false)
-gg.searchNumber(':md5')
-gg.setVisible(false)
-gg.getResults(100000)
-gg.editAll('0', gg.TYPE_BYTE)
-gg.setVisible(false)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.setVisible(false)
-gg.searchNumber(':cache')
-gg.setVisible(false)
-gg.getResults(100000)
-gg.editAll('0', gg.TYPE_BYTE)
-gg.setVisible(false)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.setVisible(false)
-gg.searchNumber(':files')
-gg.setVisible(false)
-gg.getResults(100000)
-gg.editAll('0', gg.TYPE_BYTE)
-gg.setVisible(false)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.setVisible(false)
-gg.searchNumber(':file')
-gg.setVisible(false)
-gg.getResults(100000)
-gg.editAll('0', gg.TYPE_BYTE)
-gg.setVisible(false)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.setVisible(false)
-gg.searchNumber(':es.socialpoint.DragonCity')
-gg.setVisible(false)
-gg.getResults(100000)
-gg.editAll('0', gg.TYPE_BYTE)
-gg.setVisible(false)
-gg.clearResults()
-noselect()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':userid')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':token')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':md5')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':cache')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':files')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':file')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':es.socialpoint.DragonCity')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        noselect()
     end
     function Start8()
         menu3 = gg.choice({
