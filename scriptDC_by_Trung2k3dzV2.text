@@ -2,6 +2,7 @@ local BigDC = "🔴 OFF"
 local SmallDC = "🔴 OFF"
 local OneHits = "🔴 OFF"
 local NoDamages = "🔴 OFF"
+local Country ="Việt Nam 🇻🇳"
 while (true) do
     if gg.isVisible(true) then
         menuk = 1
@@ -17,15 +18,17 @@ while (true) do
         gg.setValues(tt)
     end
     function START()
-local timess =os.date("%H:%M:%S %d-%m-%Y")
+        noselect();
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
             '5.   🏡  Move Habit  🏡',
-            '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
+            '6.   🔁  Change Dragon 🐍 --> 🐉 🔁 ',
+            '7.   🛡️  Tường Lửa MD5 🛡️ ',
+             '8.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
-                         '                           Dragon City Tools\nVersion: Pro \nTime Login:'.. timess ..')
+                         'Dragon City Tools\n\nVersion: Pro \nTime Login: '.. timess..    '\nCountry: '..Country..'')
         if menu == 1 then Start1() end
         if menu == 2 then Start2() end
         if menu == 3 then Start3() end
@@ -33,7 +36,8 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         if menu == 5 then Start5() end
         if menu == 6 then Start6() end
         if menu == 7 then Start7() end
-        if menu == 8 then ends() end
+        if menu == 8 then Start8() end
+        if menu == 9 then ends() end
         if menu == nil then noselect() end
         menuk = -1
 
@@ -48,7 +52,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("2022", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
-        noselect()
+        
 
     end
 
@@ -73,7 +77,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("1000000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
-        noselect()
+        
     end
     function skips30p()
         NoError()
@@ -84,7 +88,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("1000000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
-        noselect()
+        
     end
     function Start3()
         menu1 = gg.choice({
@@ -134,7 +138,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code2()
         -- hack lv
@@ -168,7 +172,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code3()
         -- hack lv
@@ -202,7 +206,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code4()
         -- hack lv
@@ -236,7 +240,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code5()
         -- hack lv
@@ -270,7 +274,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll("310;301;307;255", gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function code6()
         gg.setRanges(gg.REGION_C_ALLOC)
@@ -302,7 +306,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.getResults(99999)
         gg.editAll("310;301;307;255", gg.TYPE_DWORD) -- hack 4 skills đặc biệt
         NoError()
-        noselect()
+        
     end
     function Start4()
         menu2 = gg.choice({
@@ -320,14 +324,14 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
     end
     function NoCoolDown()
         mursidy = gg.multiChoice({
-            '1. 🕛  No Error  🕛', '2. 🕛  skip All time  🕛',
-            '3. 🕛  Skip 15min  🕛  ', '4. 🕛  Skip 30min  🕛  ',
-            '5. 🕛  Skip 1h  🕛 ', '6. 🕛  Skip 1h20min  🕛',
-            '7. 🕛  Skip 3h  🕛', '8. 🕛  Skip 6h40min  🕛',
-            '9. 🕛  Skip 8h  🕛  ', '❌ CLOSE ❌'
-        }, nil, '🖥️skip battle heroic and maze🖥️')
+            '0. 🕛  No Error  🕛', '1. 🕛  skip All time  🕛',
+            '2. 🕛  Skip 15min  🕛  ', '3. 🕛  Skip 30min  🕛  ',
+            '4. 🕛  Skip 1h  🕛 ', '5. 🕛  Skip 1h20min  🕛',
+            '6. 🕛  Skip 3h  🕛', '7. 🕛  Skip 6h40min  🕛',
+            '8. 🕛  Skip 8h  🕛  ', '❌ CLOSE ❌'
+        }, nil, '📺  Skip Battle  📺')
 
-        if mursidy == nil then noselect()
+        if mursidy == nil then 
         else
             if mursidy[1] == true then NoError1() end
             if mursidy[2] == true then skipAll() end
@@ -348,6 +352,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.getResults(10000)
         gg.editAll("0", gg.TYPE_BYTE)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        noselect()
     end
     function NoError1()
         gg.setRanges(gg.REGION_CODE_APP)
@@ -431,7 +436,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
         gg.editAll("0", gg.TYPE_DWORD)
         NoError()
-        noselect()
+        
     end
     function terraHabitat1Gold()
         gg.setRanges(gg.REGION_C_ALLOC)
@@ -445,8 +450,8 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.setVisible(false)
         NoError()
         gg.clearResults()
-        gg.alert('You must enter the ancient map to activate')
-        noselect()
+        gg.alert('Bạn phải vào mao khác để kích họat chức năng này!')
+        
     end
     function goCoinsSpeed()
         gg.setRanges(gg.REGION_C_ALLOC)
@@ -457,7 +462,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll('0', gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function Start5()
         gg.clearResults()
@@ -511,7 +516,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.editAll('0', gg.TYPE_DWORD)
         NoError()
         gg.clearResults()
-        noselect()
+        
     end
     function Start6()
         data = gg.prompt({
@@ -530,6 +535,65 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         -- end
     end
     function Start7()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':userid')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':token')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':md5')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':cache')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':files')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':file')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_CODE_APP)
+        gg.setVisible(false)
+        gg.searchNumber(':es.socialpoint.DragonCity')
+        gg.setVisible(false)
+        gg.getResults(100000)
+        gg.editAll('0', gg.TYPE_BYTE)
+        gg.setVisible(false)
+        gg.clearResults()
+        noselect()      
+    end
+    function Start8()
         menu3 = gg.choice({
             '1.   🔥  God Dragon Mode 🔥',
             '2.   🔥  One Hit Dragon ' .. OneHits .. '  🔥 ( Fixed )',
@@ -554,6 +618,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
             setvalue(so + py, 16, 2)
             BigDC = "🔵 ON"
             SmallDC = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2BDA0
@@ -561,6 +626,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
             py = 0xE2BDA4
             setvalue(so + py, 16, 1.10000002384)
             BigDC = "🔴 OFF"
+            noselect()
         end
     end
     function SmallDcC()
@@ -572,6 +638,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
             setvalue(so + py, 16, 0.5)
             SmallDC = "🔵 ON"
             BigDC = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2BDA0
@@ -579,6 +646,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
             py = 0xE2BDA4
             setvalue(so + py, 16, 1.10000002384)
             SmallDC = "🔴 OFF"
+            noselect()
         end
     end
     function OneHit()
@@ -588,11 +656,13 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
             setvalue(so + py, 16, 9999999)
             OneHits = "🔵 ON"
             NoDamages = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2ACC0
             setvalue(so + py, 16, 1.10000002384)
             OneHits = "🔴 OFF"
+            noselect()
         end
     end
     function NoDamage()
@@ -602,11 +672,13 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
             setvalue(so + py, 16, -9999999)
             NoDamages = "🔵 ON"
             OneHits = "🔴 OFF"
+            noselect()
         else
             so = gg.getRangesList("libDragonCity.so")[1].start
             py = 0xE2ACC0
             setvalue(so + py, 16, 1.10000002384)
             NoDamages = "🔴 OFF"
+            noselect()
         end
     end
     function GodMode()
@@ -625,6 +697,7 @@ local timess =os.date("%H:%M:%S %d-%m-%Y")
         gg.alert("God Mode Actived")
     end
     function noselect()
+        timess = os.date("%H:%M:%S\t %d-%m-%Y")
         gg.toast('<---❤-🆃🆁🆄🅽🅶2⃣🅺3⃣🅳🆉-❤--->')
     end
     function ends()
