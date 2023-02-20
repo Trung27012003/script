@@ -626,11 +626,11 @@ while (true) do
     end
     function Start7()
         menu3 = gg.choice({
-            '1.   💪  God Dragon Mode 💪',
-            '2.   💪  One Hit Dragon ' .. OneHits .. '  💪',
-            '3.   💪  No dame Dragon ' .. NoDamages .. '  💪',
-            '4.   💪  Big Dragon ' .. BigDC .. '  💪',
-            '5.   💪  Small Dragon ' .. SmallDC .. '  💪', '↩️ Return '
+            '1.   🔥  God Dragon Mode 🔥',
+            '2.   🔥  One Hit Dragon ' .. OneHits .. '  🔥',
+            '3.   🔥  No dame Dragon ' .. NoDamages .. '  🔥',
+            '4.   🔥  Big Dragon ' .. BigDC .. '  🔥',
+            '5.   🔥  Small Dragon ' .. SmallDC .. '  🔥', '↩️ Return '
         }, Last, 'Hack lv ')
         if menu3 == 1 then GodMode() end
         if menu3 == 2 then OneHit() end
