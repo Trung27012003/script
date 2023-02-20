@@ -18,7 +18,22 @@ while (true) do
     end
     function START()
         timess = os.date("%H:%M:%S %d-%m-%Y")
-        os.setlocale('vi_VN.utf8')
+        local socket = require("socket")
+local http = require("socket.http")
+local ltn12 = require("ltn12")
+-- Lấy địa chỉ IP
+local ip = socket.dns.toip("google.com")
+-- Lấy thông tin địa lý của địa chỉ IP
+local url = "http://ipinfo.io/" .. ip .. "/json"
+local response = {}
+http.request {
+  url = url,
+  method = "GET",
+  sink = ltn12.sink.table(response)
+}
+local body = table.concat(response)
+local geo = json.decode(body)
+
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
@@ -26,7 +41,7 @@ while (true) do
             '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
-                         '                      Dragon City Tools\n\nVersion: Pro \n\nTime Login:'.. timess..    '')
+                         '                      Dragon City Tools\n\nVersion: Pro \n\nTime Login:'.. timess..    ' '..geo.country..'')
         if menu == 1 then Start1() end
         if menu == 2 then Start2() end
         if menu == 3 then Start3() end
