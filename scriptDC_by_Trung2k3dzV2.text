@@ -89,7 +89,7 @@ gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
     end
     function skip30p()
 
-        gg.sgg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.setRanges(gg.REGION_CODE_APP) 
         gg.searchNumber(":error", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
         gg.getResults(10000, nil, nil, nil, nil, nil, nil, nil, nil)
