@@ -18,6 +18,7 @@ while (true) do
     end
     function START()
 timess = os.date("%H:%M:%S %d-%m-%Y")
+os.setlocale('en_US.utf8')
         menu = gg.choice({
             '1.   🗓️  Ads Calendar  🗓️', '2.   📺  Hack Skip  📺',
             '3.   🐉  Hack Level and Skills 🐉', '4.   🏁  Support Event  🏁',
@@ -25,7 +26,7 @@ timess = os.date("%H:%M:%S %d-%m-%Y")
             '6.   🔁  Change Dragon 🐉 --> 🐍 🔁 ', '7.   🔘   Other',
             '❌     Exit     ❌ '
         }, Last,
-                         '                      Dragon City Tools\nVersion: Pro \nTime Login:'.. os.date("%H:%M:%S %d-%m-%Y") ..    '')
+                         '                      Dragon City Tools\nVersion: Pro \nTime Login:'.. timess..    '')
         if menu == 1 then Start1() end
         if menu == 2 then Start2() end
         if menu == 3 then Start3() end
