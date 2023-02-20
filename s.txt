@@ -1,0 +1,7 @@
+local socket = require("socket")
+
+-- Lấy tên máy tính
+local hostname = socket.dns.gethostname()
+
+alert(hostname)
+
