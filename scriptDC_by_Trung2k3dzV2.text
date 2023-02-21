@@ -59,7 +59,7 @@ while (true) do
     function Start2()
 
         skip = gg.choice({
-            '1.   📺  30p  📺', '2.   📺  12h  📺','3.   📺  30p ( Beta )  📺', '4.   📺  12h ( Beta )  📺' '↩️ Return '
+            '1.   📺  30p  📺', '2.   📺  12h  📺','3.   📺  30p ( Beta )  📺', '4.   📺  12h ( Beta )  📺' ,'↩️ Return '
         }, nil, 'Skip hiện tại đang có: ')
         if skip == 1 then skips30p() end
         if skip == 2 then skips12h() end
