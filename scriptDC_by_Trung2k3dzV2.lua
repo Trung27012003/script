@@ -59,11 +59,13 @@ while (true) do
     function Start2()
 
         skip = gg.choice({
-            '1.   📺  30p  📺', '2.   📺  12h  📺', '↩️ Return '
+            '1.   📺  30p  📺', '2.   📺  12h  📺','3.   📺  30p ( Beta )  📺', '4.   📺  12h ( Beta )  📺' '↩️ Return '
         }, nil, 'Skip hiện tại đang có: ')
         if skip == 1 then skips30p() end
         if skip == 2 then skips12h() end
-        if skip == 3 then START() end
+        if skip == 3 then skips30pBeta() end
+        if skip == 4 then skips12hBeta() end
+        if skip == 5 then START() end
         if skip == nil then noselect() end
 
     end
@@ -86,6 +88,28 @@ while (true) do
         gg.SIGN_EQUAL, 0, -1)
         gg.getResults(1000, nil, nil, nil, 1800, 1800)
         gg.editAll("1000000", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        NoError()
+        
+    end
+    function skips12hBeta()
+        NoError()
+        gg.setRanges(gg.REGION_C_ALLOC)
+        gg.searchNumber("1;4;43200;1;4;43200::200", gg.TYPE_DWORD, false,
+                        gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(1000, nil, nil, nil, 43200, 43200)
+        gg.editAll("-1000000", gg.TYPE_DWORD)
+        gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        NoError()
+        
+    end
+    function skips30pBeta()
+        NoError()
+        gg.setRanges(gg.REGION_C_ALLOC)
+        gg.searchNumber("1;4;1800;1;4;1800::800", gg.TYPE_DWORD, false,
+        gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(1000, nil, nil, nil, 1800, 1800)
+        gg.editAll("-1000000", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
         
