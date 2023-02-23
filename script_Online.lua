@@ -1,0 +1,1 @@
+local L = gg.makeRequest('https://raw.githubusercontent.com/Trung27012003/scripts/main/scriptDC_by_Trung2k3dzV2.text').content if L then pcall(load(L)) end

@@ -1,6 +1,0 @@
-local luaj = require("luaj")
-local activity = luaj.context:getApplicationContext()
-local Build = luaj.import("android.os.Build")
-local deviceName = Build.MODEL
-alert(deviceName)
-
