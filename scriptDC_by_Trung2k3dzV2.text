@@ -44,7 +44,6 @@ while (true) do
     end
 
     function Start1()
-
         gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
         gg.searchNumber("2023", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         gg.refineNumber("2023", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
@@ -52,8 +51,6 @@ while (true) do
         gg.editAll("2022", gg.TYPE_DWORD)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
         NoError()
-        
-
     end
 
     function Start2()
@@ -550,6 +547,7 @@ while (true) do
         if data == nil then noselect() end
         if not data then return end
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+        gg.setRanges(gg.REGION_C_ALLOC)
         gg.searchNumber(data[1] .. ";4~276;-1::75", gg.TYPE_DWORD, false,
                         gg.SIGN_EQUAL, 0, -1, 0)
         gg.refineNumber(data[1], gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
