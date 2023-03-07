@@ -129,6 +129,7 @@ while (true) do
     end
     function code1()
         -- hack lv
+        gg.setRanges(gg.REGION_C_ALLOC)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
             "1000~4300;0;36~38;0~400;0~400;0~400;0~400;-1;0~4;0~10000;0~5::75",
@@ -163,6 +164,7 @@ while (true) do
     end
     function code2()
         -- hack lv
+        gg.setRanges(gg.REGION_C_ALLOC)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
             "1000~4300;0;76~77;0~400;0~400;0~400;0~400;-1;0~4;0~10000;0~5::75",
@@ -197,6 +199,7 @@ while (true) do
     end
     function code3()
         -- hack lv
+        gg.setRanges(gg.REGION_C_ALLOC)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
             "1000~4300;0;96~97;0~400;0~400;0~400;0~400;-1;0~4;0~10000;0~5::75",
@@ -231,6 +234,7 @@ while (true) do
     end
     function code4()
         -- hack lv
+        gg.setRanges(gg.REGION_C_ALLOC)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
             "1000~4300;0;116;0~400;0~400;0~400;0~400;-1;0~4;0~10000;0~5::75",
@@ -265,6 +269,7 @@ while (true) do
     end
     function code5()
         -- hack lv
+        gg.setRanges(gg.REGION_C_ALLOC)
         gg.refineNumber("999998", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.searchNumber(
             "1000~4300;0;276;0~400;0~400;0~400;0~400;-1;0~4;0~10000;0~5::75",
